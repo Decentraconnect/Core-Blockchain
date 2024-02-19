@@ -1,17 +1,8 @@
 
-# MainnetZ Blockchain Node
+# Decentraconnect Blockchain Node
 
-This project aims to provide installation, running, and maintenance capabilities of **MainnetZ validator node** for potential and existing MainnetZ Blockchain backers. The consensus structure of this chain is delegated proof of stake "DPos" and is governed by the symbiosis of MainnetZ's implementation of go-ethereum and our system contracts [https://github.com/MNZChain/system-smart-contracts]. This repository has multiple release candidates inline so we recommend checking for updates for better functions and stability.
+This project aims to provide installation, running, and maintenance capabilities of **Decentraconnect validator node** for potential and existing Decentraconnect Blockchain backers. The consensus structure of this chain is delegated proof of stake "DPos" and is governed by the symbiosis of Decentraconnect's implementation of go-ethereum and our system contracts [https://github.com/Decentraconnect/System-Contracts/tree/main]. This repository has multiple release candidates inline so we recommend checking for updates for better functions and stability.
 
-
-## Acknowledgements
-MainnetZ blockchain node inherits its core components from heco-chain project by stars-lab which itself is based on geth by the Ethereum foundation.
-
- - [Go ethereum](https://github.com/ethereum/go-ethereum)
- - [heco-chain](https://github.com/stars-labs/heco-chain)
-
-The revolution started by Bitcoin and later fueled by Ethereum Foundation has launched a wide array of technological advancements and applications.
-We acknowledge and actively contribute to decentralization causes and derivatives.
 ## System Requirements
 
 **Operating System:** Ubuntu >= 20.04 LTS
@@ -20,12 +11,12 @@ We acknowledge and actively contribute to decentralization causes and derivative
 
 **Persistent Storage:** 25GB minimum, 100GB high-speed SSD recommended
 
-**Note regarding use of GPUs -** GPUs are primarily used in POW consensus chains. Being a DPos MainnetZ chain has not only more TPS and fast block production but also doesn't need a GPU altogether for its purpose.
+**Note regarding use of GPUs -** GPUs are primarily used in POW consensus chains. Being a DPos Decentraconnect chain has not only more TPS and fast block production but also doesn't need a GPU altogether for its purpose.
 
 
 
 ## How to become a validator
-To back the MainnetZ blockchain you can become a validator. Full flow to become a validator, you must:
+To back the Decentraconnect blockchain you can become a validator. Full flow to become a validator, you must:
 * Install this package **([See Installation](#installation))**
 * Download your newly created validator wallet from your server and import it into your metamask or preferred wallet. Fund this account with the appropriate MNZ tokens needed to become a validator. Example command to download the wallet on your local PC. Only works for UNIX-based OSes or on any environment that can run the OpenSSH package:
 ```bash
@@ -35,7 +26,7 @@ To back the MainnetZ blockchain you can become a validator. Full flow to become 
 * On your server, start the node that you just installed **([See Usage/Example](#usageexamples))**
 * Once the node is started and confirmation is seen on your terminal, open the interactive console by attaching tmux session **([See Usage/Example](#usageexamples))**
 * Once inside the interactive console, you'll see "IMPORTED TRANSACTION OBJECTS" and "age=<some period like 6d5hr or 5mon 3weeks>". You need to wait until the "unauthorized validator" warning starts to pop up on the console. 
-* Once "unauthorized validators" warning shows up, go to https://staking.mainnetz.io/ and click "Become a validator". Fill in all the details in the form, in the "Fee address" field enter the validator wallet address that you imported into your metamask. Proceed further
+* Once "unauthorized validators" warning shows up, go to https://staking.decentraconnect.io/ and click "Become a validator". Fill in all the details in the form, in the "Fee address" field enter the validator wallet address that you imported into your metamask. Proceed further
 * Once the last step is done, you'll see a "🔨 mined potential block" message on the interactive console. You'll also see your validator wallet as a validator on the staking page and on explorer. You should also detach from the console after the whole process is done **([See Usage/Example](#usageexamples))**
 ## Installation
 
@@ -46,7 +37,7 @@ To back the MainnetZ blockchain you can become a validator. Full flow to become 
 If failed you may end up losing your stake in the blockchain and your staked coins, if any. You'll be jailed at once with no return point by the blockchain if found down/dead. You'll be responsible for chain data corruption on your node, frying up your motherboard, or damaging yourself and your surroundings. 
 
 
-To install the MainnetZ validator node in ubuntu linux
+To install the Decentraconnect validator node in ubuntu linux
 ```bash
   sudo -i
   apt update && apt upgrade
@@ -58,8 +49,8 @@ Skip the above commands if you have already updated the system and installed the
 Connect again to your server after reboot
 ```bash
   sudo -i
-  git clone https://github.com/MNZChain/Core-Blockchain.git
-  cd core-blockchain
+  git clone https://github.com/Decentraconnect/Core-Blockchain.git
+  cd Core-Blockchain
   ./node-setup --validator 1
 ```
 After you run node-setup, follow the on-screen instructions carefully and you'll get confirmation that the node was successfully installed on your system.
